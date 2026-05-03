@@ -32,7 +32,10 @@ urlpatterns = [
     path('login/', TemplateView.as_view(template_name="index.html")),
     # path('register/', TemplateView.as_view(template_name="index.html")),
     path(route='add_review', view=views.add_review, name='add_review'),
-    path('dealer/<int:dealer_id>', TemplateView.as_view(template_name="index.html")),
+    path(
+        'dealer/<int:dealer_id>',
+        TemplateView.as_view(
+            template_name="index.html")),
     path('postreview/<int:dealer_id>',
          TemplateView.as_view(template_name="index.html")),
     # path('postreview/<int:dealer_id>',TemplateView.as_view(template_name="index.html")),
